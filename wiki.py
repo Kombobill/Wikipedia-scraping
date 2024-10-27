@@ -1,18 +1,28 @@
-import requests
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
-# Making a GET request
-r = requests.get('https://en.wikipedia.org/wiki/Kenya')
+import time
 
-# check status code for response received
-# success code - 200
-print(r)
+# Set up the Chrome WebDriver with the ChromeDriver path
+service = Service(ChromeDriverManager().install())
+driver = webdriver.Chrome(service=service)
 
-# print content of request
-# print(r.content)
+# Load the Wikipedia page
+url = 'https://en.wikipedia.org/wiki/Kenya'
+driver.get(url)
 
-# Parsing the HTML
-soup = BeautifulSoup(r.content, 'html.parser')
-s = soup.find('div', class_='mw-heading mw-heading3')
-content = s.find_all('p')
+# Optional: Wait for the page to load
+time.sleep(2)
 
-print(content)
+# Parse the page content with BeautifulSoup
+soup = BeautifulSoup(driver.page_source, 'html.parser')
+content = soup.find('div', class_='mw-parser-output').find_all('p')
+
+# Print the text of each paragraph found
+for paragraph in content:
+    print(paragraph.text)
+
+# Close the browser
+driver.quit()
+

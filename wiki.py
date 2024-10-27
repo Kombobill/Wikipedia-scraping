@@ -1,5 +1,5 @@
 import requests
-
+from bs4 import BeautifulSoup
 # Making a GET request
 r = requests.get('https://en.wikipedia.org/wiki/Kenya')
 
@@ -8,4 +8,8 @@ r = requests.get('https://en.wikipedia.org/wiki/Kenya')
 print(r)
 
 # print content of request
-print(r.content)
+# print(r.content)
+
+# Parsing the HTML
+soup = BeautifulSoup(r.content, 'html.parser')
+print(soup.prettify())

@@ -12,4 +12,7 @@ print(r)
 
 # Parsing the HTML
 soup = BeautifulSoup(r.content, 'html.parser')
-print(soup.prettify())
+s = soup.find('div', class_='mw-heading mw-heading3')
+content = s.find_all('p')
+
+print(content)

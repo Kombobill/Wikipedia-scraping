@@ -16,7 +16,8 @@ if r.status_code == 200:
     paragraphs = article_content.find_all('p')
     
     # Printing each paragraph's text
-    for paragraph in paragraphs:
-        print(paragraph.get_text())
-else:
-    print(f"Failed to retrieve the page. Status code: {r.status_code}")
+#     for paragraph in paragraphs:
+#         print(paragraph.get_text())
+# else:
+#     print(f"Failed to retrieve the page. Status code: {r.status_code}")
+print(paragraphs)

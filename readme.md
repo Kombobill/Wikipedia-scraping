@@ -21,18 +21,18 @@ Python 3.6 or higher
 requests and BeautifulSoup4 libraries
 You can install the necessary libraries via pip:
 
-bash
-Copy code
-pip install requests beautifulsoup4
-Installation
+        pip install requests beautifulsoup4
+
+
+## Installation
 You can set up this project by either cloning the repository or downloading the files manually.
 
 Clone Repository
 Open a terminal or command prompt.
 Use the following git command to clone the repository:
-bash
-Copy code
-git clone https://github.com/your-username/repository-name.git
+
+
+        git clone https://github.com/your-username/repository-name.git
 Navigate to the cloned directory:
 bash
 Copy code

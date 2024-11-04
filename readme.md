@@ -44,6 +44,8 @@ Click on the Code button and select Download ZIP.
 Extract the ZIP file to a desired location.
 
 Open a terminal and navigate to the extracted directory:
+
+
         cd path/to/extracted-folder
 
 

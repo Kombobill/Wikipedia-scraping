@@ -54,39 +54,3 @@ Open a terminal and navigate to the extracted directory:
 After navigating to the project directory, you can run the script with:
 
         python wiki_scraper.py
-
-### Code Explanation
-
-
-Here's a breakdown of what each section in the script does:
-
-python
-Copy code
-import requests
-from bs4 import BeautifulSoup
-
-# Making a GET request to fetch the HTML content of the Wikipedia page
-r = requests.get('https://en.wikipedia.org/wiki/Kenya')
-
-# Check if the request was successful
-if r.status_code == 200:
-    # Parsing the HTML
-    soup = BeautifulSoup(r.content, 'html.parser')
-    
-    # Finding the main content section
-    article_content = soup.find('div', class_='mw-body-content')
-    
-    # Extracting all paragraphs from the article content
-    paragraphs = article_content.find_all('p')
-    
-    # Printing each paragraph's text
-    for paragraph in paragraphs:
-        print(paragraph.get_text())
-else:
-    print(f"Failed to retrieve the page. Status code: {r.status_code}")
-This script:
-
-Fetches the HTML content of the Kenya article.
-Parses the HTML to locate the main content area.
-Extracts paragraphs from the main content.
-Prints each paragraph’s text, giving the article's main content as output.

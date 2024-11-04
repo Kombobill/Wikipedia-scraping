@@ -1,7 +1,8 @@
-## Wikipedia Kenya Article Scraper
+# Wikipedia Kenya Article Scraper
 This project contains a Python script that retrieves the main article content from the Wikipedia page for Kenya. It uses requests to fetch the page's HTML content and BeautifulSoup for parsing and extracting paragraphs from the article.
 
-Table of Contents
+## Table of Contents
+
 Description
 System Requirements
 Installation
@@ -9,10 +10,11 @@ Clone Repository
 Download ZIP
 Usage
 Code Explanation
-Description
+
+## Description
 The script retrieves and parses the HTML content of Wikipedia's Kenya article, extracting paragraphs from the main content section. It checks for a successful HTTP response, and if successful, retrieves the article's main text and outputs it to the console.
 
-System Requirements
+## System Requirements
 To run this script, you need:
 
 Python 3.6 or higher

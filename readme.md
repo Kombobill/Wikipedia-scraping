@@ -34,24 +34,28 @@ Use the following git command to clone the repository:
 
         git clone https://github.com/your-username/repository-name.git
 Navigate to the cloned directory:
-bash
-Copy code
-cd repository-name
-Download ZIP
+
+
+        cd repository-name
+
+
 Go to the repository page on GitHub.
 Click on the Code button and select Download ZIP.
 Extract the ZIP file to a desired location.
+
 Open a terminal and navigate to the extracted directory:
-bash
-Copy code
-cd path/to/extracted-folder
-Usage
+        cd path/to/extracted-folder
+
+
+### Usage
+
 After navigating to the project directory, you can run the script with:
 
-bash
-Copy code
-python wiki_scraper.py
-Code Explanation
+        python wiki_scraper.py
+
+### Code Explanation
+
+
 Here's a breakdown of what each section in the script does:
 
 python
